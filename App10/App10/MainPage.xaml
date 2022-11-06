@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App10.MainPage">
+    <StackLayout BackgroundColor="#151F28">
+        <Button x:Name="loadBtn" Clicked="loadBtn_Clicked_1" Text="Load from file" BackgroundColor="#1F2F3F" TextColor="LightCoral"/>
+        <Editor x:Name="barCodeDigits" BackgroundColor="#1F2F3F" TextColor="Pink" Keyboard="Plain" Completed="barCodeDigits_Completed"/>
+        <ScrollView>
+        <Grid IsEnabled="False">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width ="0.9*"/>
+                <ColumnDefinition  Width="4*"/>
+                <ColumnDefinition  Width ="*"/>
+                <ColumnDefinition  Width ="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height =" 20 "></RowDefinition>
+                <RowDefinition Height =" * "></RowDefinition>
+            </Grid.RowDefinitions>
+                
+
+
+                <ListView Grid.Column="1" Grid.Row="1" x:Name="itemNames"  BackgroundColor="#212F3E" RowHeight="20"   />
+
+                <ListView Grid.Column="0" Grid.Row="1" x:Name="countNum"  BackgroundColor="#1F2F3F" RowHeight="20" HorizontalOptions="Start"/>
+
+                <ListView Grid.Column="2" Grid.Row="1" x:Name="barCodeNums" BackgroundColor="#1F2F3F" RowHeight="20"/>
+                <ListView Grid.Column="3" Grid.Row="1"  x:Name="isPresent"  BackgroundColor="#1F2F3F" RowHeight="20"/>
+
+        </Grid>
+    </ScrollView>
+    </StackLayout>
+</ContentPage>
